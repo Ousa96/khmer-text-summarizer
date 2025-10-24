@@ -1,0 +1,169 @@
+      body {
+        font-family: "Hanuman", serif;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #003366;
+        color: white;
+        padding: 10px 20px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo img {
+        height: 60px;
+        margin-right: 15px;
+      }
+
+      .title {
+        font-size: 16px;
+        line-height: 1.4;
+      }
+
+      .main-title {
+        position: absolute;
+        left: 44%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 28px;
+      }
+
+      .navbar-custom {
+        background-color: #003366;
+      }
+
+      .navbar-custom .nav-link {
+        color: white;
+        margin-right: 10px;
+        text-decoration: none;
+      }
+
+      .navbar-custom .nav-link:hover {
+        text-decoration: underline;
+      }
+
+      /* Editable container for input and output */
+      /* .editable-container {
+        position: relative;
+        margin: 10px 0;
+      }
+
+      .editable {
+        border: 1px solid #ffffff;
+        padding: 10px;
+        min-height: 250px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        line-height: 1.5;
+        overflow-y: auto;
+      } */
+
+      /* Editable container for input and output */
+    .editable-container {
+      position: relative;
+      margin: 10px 0;
+    }
+
+    /* Input box */
+    .editable {
+      flex: 1;
+      min-height: 250px;
+      border: none;
+      padding: 0.1rem;
+      font-size: 18px;
+      font-family: 'Hanuman', serif;
+      white-space: pre-wrap;
+      outline: none;
+      position: relative;
+    }
+
+    /* Optional: show placeholder text using data-placeholder */
+    .editable:empty:before {
+      content: attr(data-placeholder);
+      color: #999;
+      pointer-events: none;
+    }
+
+    /* Make input and output same size */
+    #input,
+    #output {
+      min-height: 350px;
+    }
+
+    /* Buttons inside input box */
+    .icon-buttons {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .icon-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px; /* Adjusted size */
+      color: #232323; /* Always white icons */
+      border-radius: 50%; /* Make the outline a circle on hover */
+      padding: 6px; /* Some padding for the circle effect */
+      transition: box-shadow 0.2s ease;
+    }
+
+    .icon-btn:hover {
+      color: #ffffff; /* Always white, no color change */
+      box-shadow: 0 0 0 2px rgba(200, 200, 200, 0.8); /* Gray circle outline */
+    }
+
+    /* Summarize button inside input */
+    .btn-summarize {
+      bottom: 10px;
+      right: 10px;
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 10px 20px; /* Increased padding */
+      border-radius: 8px;  /* Slightly more rounded */
+      cursor: pointer;
+      font-size: 16px;     /* Larger font */
+    }
+
+
+    .btn-summarize:hover {
+      background-color: #002244;
+    }
+    /* Centered loading text with animation */
+    .loading-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 16px;
+      font-weight: bold;
+      color: #10185b; /* Soft gray color */
+      animation: pulse 1.5s infinite ease-in-out;
+    }
+
+    /* Pulse animation for subtle effect */
+    @keyframes pulse {
+      0% {
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+      100% {
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
