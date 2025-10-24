@@ -12,7 +12,7 @@ app = Flask(__name__)
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 # Hugging Face model setup
-HF_API_TOKEN = os.environ.get("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") # replace with your actual token
+HF_API_TOKEN = os.environ.get("HF_API_TOKEN") # replace with your actual token
 MODEL_ID = "angkor96/khmer-news-summarization"  # change if needed
 HF_API_URL = f"https://api-inference.huggingface.co/models/angkor96/khmer-news-summarization" 
 
@@ -68,4 +68,5 @@ def summarize():
 # ================== Run server ==================
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000)
+
 
